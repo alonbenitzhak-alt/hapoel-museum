@@ -45,16 +45,21 @@ export default function Songs() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="gradient-to-right text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-6xl font-black mb-3">🎵 שירים</h1>
-          <p className="text-xl text-red-100">אוסף שירי הפועל וקריאות היסטוריות</p>
+      <section className="gradient-to-right text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-5 left-5 text-[180px]">🎵</div>
+          <div className="absolute bottom-5 right-5 text-[180px]">🎤</div>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-7xl md:text-8xl font-black mb-6">🎵 שירים וקריאות</h1>
+          <p className="text-2xl md:text-3xl text-red-100 font-bold mb-4">אוסף מלא של שירי הפועל וקריאות היסטוריות</p>
+          <p className="text-lg text-red-100/90 max-w-2xl mx-auto">קולות של אוהדים אמתיים לדורות - תרבות שחיה בחמוצו של כל משחק</p>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-24">
         {/* Toggle Buttons */}
-        <div className="mb-8 flex gap-4 justify-center">
+        <div className="mb-12 flex gap-4 justify-center">
           <button
             onClick={() => {
               setShowChants(false);
