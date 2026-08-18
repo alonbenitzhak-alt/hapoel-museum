@@ -1,312 +1,106 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-interface Match {
+interface MemorableMatch {
   id: number;
-  season: string;
-  opponent: string;
-  score: string;
-  result: "W" | "D" | "L";
   date: string;
+  opponent: string;
+  englishOpponent: string;
+  score: string;
   competition: string;
+  englishCompetition: string;
+  description: string;
+  englishDescription: string;
+  significance: string;
 }
 
-const matches: Match[] = [
-  {
-    id: 1,
-    season: "2023-24",
-    opponent: "בית״ר ירושלים",
-    score: "3-1",
-    result: "W",
-    date: "15/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 2,
-    season: "2023-24",
-    opponent: "מכבי תל אביב",
-    score: "2-2",
-    result: "D",
-    date: "20/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 3,
-    season: "2023-24",
-    opponent: "הפועל באר שבע",
-    score: "1-0",
-    result: "W",
-    date: "25/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 4,
-    season: "2023-24",
-    opponent: "מכבי חיפה",
-    score: "2-2",
-    result: "D",
-    date: "30/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 5,
-    season: "2022-23",
-    opponent: "בית״ר ירושלים",
-    score: "1-2",
-    result: "L",
-    date: "10/05/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 6,
-    season: "2022-23",
-    opponent: "מכבי תל אביב",
-    score: "3-1",
-    result: "W",
-    date: "15/04/2023",
-    competition: "ליגת העל",
-  },
-];
+interface Derby {
+  id: number;
+  opponent: string;
+  englishOpponent: string;
+  description: string;
+  englishDescription: string;
+  recordAgainst: string;
+  englishRecordAgainst: string;
+}
+
+interface MatchesData {
+  memorableMatches: MemorableMatch[];
+  derbies: Derby[];
+}
+
+const defaultData: MatchesData = { memorableMatches: [], derbies: [] };
 
 export default function Matches() {
-  const [selectedSeason, setSelectedSeason] = useState<string>("2023-24");
+  const [data, setData] = useState<MatchesData>(defaultData);
 
-  const seasons = [...new Set(matches.map((m) => m.season))].sort((a, b) =>
-    b.localeCompare(a)
-  );
-
-  const filteredMatches = matches.filter(
-    (m) => m.season === selectedSeason
-  );
-
-  const stats = {
-    W: filteredMatches.filter((m) => m.result === "W").length,
-    D: filteredMatches.filter((m) => m.result === "D").length,
-    L: filteredMatches.filter((m) => m.result === "L").length,
-  };
+  useEffect(() => {
+    fetch("/data/matches.json")
+      .then(res => res.json())
+      .then(fetchedData => setData(fetchedData))
+      .catch(err => console.error("Failed to load matches:", err));
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-red-50">
-      <section className="bg-gradient-to-r from-red-700 to-red-500 text-white py-20">
+      <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-black mb-3">
-            ⚽ משחקי הפועל באר שבע
-          </h1>
-          <p className="text-xl text-red-100">
-            ארכיון משחקים וסטטיסטיקות לפי עונה
-          </p>
+          <h1 className="text-6xl font-black mb-3">⚽ משחקים</h1>
+          <p className="text-xl text-red-100">משחקים משמעותיים ודרביים בהיסטוריית הפועל</p>
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <label
-            htmlFor="season"
-            className="block text-lg font-bold text-gray-800 mb-3"
-          >
-            בחר עונה
-          </label>
-
-          <select
-            id="season"
-            value={selectedSeason}
-            onChange={(e) => setSelectedSeason(e.target.value)}
-            className="border-2 border-red-300 rounded-lg px-4 py-3 text-lg font-semibold bg-white text-gray-800"
-          >
-            {seasons.map((season) => (
-              <option key={season} value={season}>
-                {season}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 text-center">
- "use client";
-
-import { useState } from "react";
-
-interface Match {
-  id: number;
-  season: string;
-  opponent: string;
-  score: string;
-  result: "W" | "D" | "L";
-  date: string;
-  competition: string;
-}
-
-const matches: Match[] = [
-  {
-    id: 1,
-    season: "2023-24",
-    opponent: "בית״ר ירושלים",
-    score: "3-1",
-    result: "W",
-    date: "15/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 2,
-    season: "2023-24",
-    opponent: "מכבי תל אביב",
-    score: "2-2",
-    result: "D",
-    date: "20/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 3,
-    season: "2023-24",
-    opponent: "הפועל באר שבע",
-    score: "1-0",
-    result: "W",
-    date: "25/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 4,
-    season: "2023-24",
-    opponent: "מכבי חיפה",
-    score: "2-2",
-    result: "D",
-    date: "30/08/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 5,
-    season: "2022-23",
-    opponent: "בית״ר ירושלים",
-    score: "1-2",
-    result: "L",
-    date: "10/05/2023",
-    competition: "ליגת העל",
-  },
-  {
-    id: 6,
-    season: "2022-23",
-    opponent: "מכבי תל אביב",
-    score: "3-1",
-    result: "W",
-    date: "15/04/2023",
-    competition: "ליגת העל",
-  },
-];
-
-export default function Matches() {
-  const [selectedSeason, setSelectedSeason] = useState("2023-24");
-
-  const seasons = [...new Set(matches.map((m) => m.season))].sort(
-    (a, b) => b.localeCompare(a)
-  );
-
-  const filteredMatches = matches.filter(
-    (m) => m.season === selectedSeason
-  );
-
-  const stats = {
-    W: filteredMatches.filter((m) => m.result === "W").length,
-    D: filteredMatches.filter((m) => m.result === "D").length,
-    L: filteredMatches.filter((m) => m.result === "L").length,
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-red-50">
-      <section className="bg-gradient-to-r from-red-700 to-red-500 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-right">
-          <h1 className="text-5xl md:text-6xl font-black mb-3">
-            ⚽ משחקי הפועל באר שבע
-          </h1>
-          <p className="text-xl text-red-100">
-            ארכיון משחקים וסטטיסטיקות לפי עונה
-          </p>
-        </div>
-      </section>
-
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <label className="block text-lg font-bold mb-3 text-gray-800">
-            בחירת עונה
-          </label>
-
-          <select
-            value={selectedSeason}
-            onChange={(e) => setSelectedSeason(e.target.value)}
-            className="border-2 border-red-200 rounded-lg px-4 py-3 text-lg bg-white text-gray-800"
-          >
-            {seasons.map((season) => (
-              <option key={season} value={season}>
-                {season}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="grid grid-cols-3 gap-4 mb-10">
-          <div className="bg-green-100 border border-green-200 rounded-xl p-6 text-center">
-            <div className="text-4xl font-black text-green-600">
-              {stats.W}
-            </div>
-            <div className="font-bold text-gray-700">ניצחונות</div>
-          </div>
-
-          <div className="bg-yellow-100 border border-yellow-200 rounded-xl p-6 text-center">
-            <div className="text-4xl font-black text-yellow-600">
-              {stats.D}
-            </div>
-            <div className="font-bold text-gray-700">תיקו</div>
-          </div>
-
-          <div className="bg-red-100 border border-red-200 rounded-xl p-6 text-center">
-            <div className="text-4xl font-black text-red-600">
-              {stats.L}
-            </div>
-            <div className="font-bold text-gray-700">הפסדים</div>
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          {filteredMatches.map((match) => (
-            <div
-              key={match.id}
-              className="bg-white rounded-xl shadow-md p-6 border-r-4 border-red-600"
-            >
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-right">
-                  <div className="text-sm text-gray-500">
-                    {match.date} · {match.competition}
+        <div className="mb-12">
+          <h2 className="text-4xl font-black mb-8 text-right">משחקים זיכרוניים</h2>
+          <div className="grid gap-6">
+            {data.memorableMatches.map((match) => (
+              <div key={match.id} className="bg-white rounded-lg shadow-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-black text-red-700 mb-2">
+                      {match.opponent}
+                    </h3>
+                    <p className="text-gray-600">
+                      <span className="font-semibold">תאריך:</span> {match.date}
+                    </p>
+                    <p className="text-gray-600">
+                      <span className="font-semibold">תחרות:</span> {match.competition}
+                    </p>
                   </div>
-                  <div className="text-2xl font-black text-gray-900">
-                    הפועל באר שבע נגד {match.opponent}
+                  <div className="text-right">
+                    <div className="text-5xl font-black text-red-600 mb-2">
+                      {match.score}
+                    </div>
+                    <div className="text-gray-500 text-sm">{match.significance}</div>
                   </div>
                 </div>
+                <p className="text-gray-700 leading-relaxed">{match.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-                <div className="text-center">
-                  <div className="text-4xl font-black text-red-600">
-                    {match.score}
-                  </div>
-
-                  <div
-                    className={`font-bold ${
-                      match.result === "W"
-                        ? "text-green-600"
-                        : match.result === "D"
-                          ? "text-yellow-600"
-                          : "text-red-600"
-                    }`}
-                  >
-                    {match.result === "W"
-                      ? "ניצחון"
-                      : match.result === "D"
-                        ? "תיקו"
-                        : "הפסד"}
+        <div>
+          <h2 className="text-4xl font-black mb-8 text-right">דרביים</h2>
+          <div className="grid gap-6">
+            {data.derbies.map((derby) => (
+              <div key={derby.id} className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-red-700">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-black text-red-700 mb-3">
+                      {derby.opponent}
+                    </h3>
+                    <p className="text-gray-700 mb-4">{derby.description}</p>
+                    <p className="text-gray-600">
+                      <span className="font-semibold">רקורד:</span> {derby.recordAgainst}
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>
