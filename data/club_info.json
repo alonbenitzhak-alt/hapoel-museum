@@ -1,0 +1,11 @@
+{
+  "name": "הפועל באר שבע",
+  "englishName": "Hapoel Beersheba",
+  "founded": 1949,
+  "city": "באר שבע",
+  "englishCity": "Beersheba",
+  "colors": {
+    "primary": "#CC0000",
+    "secondary": "#FFFFFF"
+  }
+}
