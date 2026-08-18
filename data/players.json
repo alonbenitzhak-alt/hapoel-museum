@@ -1,0 +1,38 @@
+{
+  "legendaryPlayers": [
+    {
+      "id": 1,
+      "name": "יש להוסיף",
+      "englishName": "To be added",
+      "position": "שחקן",
+      "englishPosition": "Player",
+      "yearsActive": "1949-1970",
+      "description": "שחקן אגדי",
+      "englishDescription": "Legendary player",
+      "achievements": []
+    }
+  ],
+  "recentPlayers": [
+    {
+      "id": 1,
+      "name": "יש להוסיף",
+      "englishName": "To be added",
+      "position": "שחקן",
+      "englishPosition": "Player",
+      "nationality": "ישראל",
+      "englishNationality": "Israel",
+      "joinedYear": 2024,
+      "number": 0
+    }
+  ],
+  "managers": [
+    {
+      "id": 1,
+      "name": "רן קוזוך",
+      "englishName": "Ran Kozuch",
+      "yearsActive": "2024-present",
+      "achievements": "מדריך נוכחי עם שיעור זכיות גבוה",
+      "englishAchievements": "Current coach with high win rate"
+    }
+  ]
+}

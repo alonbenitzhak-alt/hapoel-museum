@@ -1,0 +1,72 @@
+{
+  "championships": [
+    {
+      "year": 1974,
+      "season": "1974-75",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "האליפות הראשונה של הקבוצה",
+      "englishDescription": "The club's first championship"
+    },
+    {
+      "year": 1975,
+      "season": "1975-76",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "אליפות שנייה ברציפות",
+      "englishDescription": "Second consecutive championship"
+    },
+    {
+      "year": 2015,
+      "season": "2015-16",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "חזרה לשיא אחרי 40 שנה",
+      "englishDescription": "Return to glory after 40 years"
+    },
+    {
+      "year": 2016,
+      "season": "2016-17",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "אליפות שנייה ברציפות בתקופה החדשה",
+      "englishDescription": "Second consecutive championship in new era"
+    },
+    {
+      "year": 2017,
+      "season": "2017-18",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "שלוש אליפויות ברציפות",
+      "englishDescription": "Three consecutive championships"
+    },
+    {
+      "year": 2025,
+      "season": "2025-26",
+      "title": "אליפות ישראל",
+      "englishTitle": "Israeli Premier League",
+      "description": "אליפות אחרונה",
+      "englishDescription": "Latest championship"
+    }
+  ],
+  "cups": [
+    {
+      "year": 1996,
+      "season": "1996-97",
+      "title": "גביע ישראל",
+      "englishTitle": "Israeli Cup",
+      "opponent": "מכבי תל אביב",
+      "englishOpponent": "Maccabi Tel Aviv"
+    },
+    {
+      "year": 2024,
+      "season": "2024-25",
+      "title": "גביע ישראל",
+      "englishTitle": "Israeli Cup",
+      "opponent": "ביתר ירושלים",
+      "englishOpponent": "Beitar Jerusalem"
+    }
+  ],
+  "superCups": 4,
+  "description": "הישגי הקבוצה דרך השנים"
+}
