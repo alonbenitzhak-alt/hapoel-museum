@@ -60,7 +60,7 @@ export default function Songs() {
               setShowChants(false);
               setSelectedSong(null);
             }}
-            className={px-8 py-3 rounded-lg font-bold transition-all }
+            className={`${!showChants ? "bg-red-600 text-white" : "bg-white border-2 border-red-600 text-red-600"} px-8 py-3 rounded-lg font-bold transition-all`}
           >
             🎵 שירים
           </button>
@@ -69,7 +69,7 @@ export default function Songs() {
               setShowChants(true);
               setSelectedSong(null);
             }}
-            className={px-8 py-3 rounded-lg font-bold transition-all }
+            className={`${showChants ? "bg-red-600 text-white" : "bg-white border-2 border-red-600 text-red-600"} px-8 py-3 rounded-lg font-bold transition-all`}
           >
             📢 קריאות
           </button>
