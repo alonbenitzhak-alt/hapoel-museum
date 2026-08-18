@@ -7,5 +7,16 @@
   "colors": {
     "primary": "#CC0000",
     "secondary": "#FFFFFF"
-  }
+  },
+  "nickname": "האדומים",
+  "englishNickname": "The Reds",
+  "stadium": {
+    "name": "אצטדיון טרנר",
+    "englishName": "Turner Stadium",
+    "capacity": 16126,
+    "built": 2015,
+    "opened": "2015-09-20"
+  },
+  "description": "קבוצת כדורגל ישראלית מבאר שבע, המייצגת את תנועת הפועל",
+  "englishDescription": "Israeli football club from Beersheba, representing the Hapoel movement"
 }
