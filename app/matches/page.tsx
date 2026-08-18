@@ -1,96 +1,119 @@
-"use client";
+﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-interface Match {
+interface MemorableMatch {
   id: number;
-  season: string;
-  opponent: string;
-  score: string;
-  result: "W" | "D" | "L";
   date: string;
+  opponent: string;
+  englishOpponent: string;
+  score: string;
   competition: string;
+  englishCompetition: string;
+  description: string;
+  englishDescription: string;
+  significance: string;
 }
 
-const matches: Match[] = [
-  {
-    id: 1,
-    season: "2023-24",
-    opponent: "בית\"ר ירושלים",
-    score: "3-1",
-    result: "W",
-    date: "15/08/2023",
-    competition: "ליגה לאומית",
-  },
-  {
-    id: 2,
-    season: "2023-24",
-    opponent: "מכבי תל אביב",
-    score: "2-2",
-    result: "D",
-    date: "20/08/2023",
-    competition: "ליגה לאומית",
-  },
-  {
-    id: 3,
-    season: "2023-24",
-    opponent: "הפועל באר שבע",
-    score: "1-0",
-    result: "W",
-    date: "25/08/2023",
-    competition: "ליגה לאומית",
-  },
-  {
-    id: 4,
-    season: "2023-24",
-    opponent: "מ\"כ חיפה",
-    score: "2-2",
-    result: "D",
-    date: "30/08/2023",
-    competition: "ליגה לאומית",
-  },
-  {
-    id: 5,
-    season: "2022-23",
-    opponent: "בית\"ר ירושלים",
-    score: "1-2",
-    result: "L",
-    date: "10/05/2023",
-    competition: "ליגה לאומית",
-  },
-  {
-    id: 6,
-    season: "2022-23",
-    opponent: "מכבי תל אביב",
-    score: "3-1",
-    result: "W",
-    date: "15/04/2023",
-    competition: "ליגה לאומית",
-  },
-];
+interface Derby {
+  id: number;
+  opponent: string;
+  englishOpponent: string;
+  description: string;
+  englishDescription: string;
+  recordAgainst: string;
+  englishRecordAgainst: string;
+}
+
+interface MatchesData {
+  memorableMatches: MemorableMatch[];
+  derbies: Derby[];
+}
+
+const defaultData: MatchesData = { memorableMatches: [], derbies: [] };
 
 export default function Matches() {
-  const [selectedSeason, setSelectedSeason] = useState<string>("2023-24");
+  const [data, setData] = useState<MatchesData>(defaultData);
 
-  const seasons = [...new Set(matches.map((m) => m.season))].sort((a, b) =>
-    b.localeCompare(a)
-  );
-  const filteredMatches = matches.filter((m) => m.season === selectedSeason);
-
-  const stats = {
-    W: filteredMatches.filter((m) => m.result === "W").length,
-    D: filteredMatches.filter((m) => m.result === "D").length,
-    L: filteredMatches.filter((m) => m.result === "L").length,
-  };
+  useEffect(() => {
+    fetch("/data/matches.json")
+      .then(res => res.json())
+      .then(fetchedData => setData(fetchedData))
+      .catch(err => console.error("Failed to load matches:", err));
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-6xl font-black mb-3">⚽ משחקי גמלופדיה</h1>
-          <p className="text-xl text-blue-100">ארכיון משחקים וסטטיסטיקות לאורך השנים</p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="gradient-to-right text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-5 left-5 text-[180px]">⚽</div>
+          <div className="absolute bottom-5 right-5 text-[180px]">🏆</div>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-7xl md:text-8xl font-black mb-6">⚽ משחקים</h1>
+          <p className="text-2xl md:text-3xl text-red-100 font-bold mb-4">משחקים משמעותיים ודרביים בהיסטוריית הפועל</p>
+          <p className="text-lg text-red-100/90 max-w-2xl mx-auto">מרגעים שהגדירו את קורת הקבוצה וזיכרונות שנשמרו בלב כל אוהד</p>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="mb-8">
+      <section className="max-w-6xl mx-auto px-4 py-24">
+        {/* Memorable Matches */}
+        <div className="mb-24">
+          <div className="mb-12">
+            <h2 className="text-5xl font-black mb-4">משחקים זיכרוניים</h2>
+            <p className="text-gray-600 text-lg">רגעים שהשאירו חותם בהיסטוריה של הפועל באר שבע</p>
+          </div>
+          <div className="grid gap-6">
+            {data.memorableMatches.map((match) => (
+              <div key={match.id} className="card card-with-border">
+                <div className="flex items-start justify-between gap-8">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-black text-red-700 mb-4">
+                      {match.opponent}
+                    </h3>
+                    <div className="space-y-2 mb-4">
+                      <p className="text-gray-600">
+                        <span className="font-semibold">תאריך:</span> {match.date}
+                      </p>
+                      <p className="text-gray-600">
+                        <span className="font-semibold">תחרות:</span> {match.competition}
+                      </p>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">{match.description}</p>
+                  </div>
+                  <div className="text-center flex-shrink-0">
+                    <div className="text-5xl font-black text-red-600 mb-2">
+                      {match.score}
+                    </div>
+                    <div className="text-gray-500 text-sm bg-red-50 px-3 py-1 rounded">
+                      {match.significance}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Derbies */}
+        <div>
+          <h2 className="text-4xl font-black mb-8">דרביים</h2>
+          <div className="grid gap-6">
+            {data.derbies.map((derby) => (
+              <div key={derby.id} className="card card-with-border">
+                <h3 className="text-2xl font-black text-red-700 mb-3">
+                  {derby.opponent}
+                </h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">{derby.description}</p>
+                <p className="text-gray-600">
+                  <span className="font-semibold">רקורד:</span> {derby.recordAgainst}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,0 +1,69 @@
+{
+  "jerseys": [
+    {
+      "id": 1,
+      "season": "1949-1955",
+      "era": "תקופת הייסוד",
+      "englishEra": "Founding Era",
+      "description": "החולצה הראשונה של הפועל באר שבע בצבעי האדום והלבן, המייצגים את תנועת הפועל.",
+      "englishDescription": "The first jersey of Hapoel Beersheba in red and white colors, representing the Hapoel movement.",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "ביתי",
+      "englishManufacturer": "Local",
+      "imageUrl": null
+    },
+    {
+      "id": 2,
+      "season": "1970-1985",
+      "era": "התקופה הקלאסית",
+      "englishEra": "Classic Era",
+      "description": "חולצה מודרנית יותר עם עיצוב מוקפד של הסמל של הקבוצה.",
+      "englishDescription": "A more modern jersey with a refined club crest design.",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "Adidas",
+      "englishManufacturer": "Adidas",
+      "imageUrl": null
+    },
+    {
+      "id": 3,
+      "season": "1995-2005",
+      "era": "תקופת ההתחדשות",
+      "englishEra": "Renaissance Era",
+      "description": "חולצה עם דוגמנים מודרניים וטכנולוגיה משודרגת של הבדים.",
+      "englishDescription": "Jersey with modern patterns and upgraded fabric technology.",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "Puma",
+      "englishManufacturer": "Puma",
+      "imageUrl": null
+    },
+    {
+      "id": 4,
+      "season": "2010-2020",
+      "era": "תקופת הזהב",
+      "englishEra": "Golden Era",
+      "description": "חולצה עם ספונסורים ותכניות דיגיטליות המשקפות את התקדמות הקבוצה.",
+      "englishDescription": "Jersey with sponsors and digital designs reflecting the club's progression.",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "Umbro",
+      "englishManufacturer": "Umbro",
+      "imageUrl": null
+    },
+    {
+      "id": 5,
+      "season": "2021-2024",
+      "era": "תקופת עכשיו",
+      "englishEra": "Modern Era",
+      "description": "חולצה עדכנית עם טכנולוגיות חדישות ועיצוב עכשווי המשקף את חזון הקבוצה.",
+      "englishDescription": "Contemporary jersey with cutting-edge technology and modern design reflecting the club's vision.",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "Nike",
+      "englishManufacturer": "Nike",
+      "imageUrl": null
+    }
+  ]
+}

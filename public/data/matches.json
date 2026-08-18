@@ -1,0 +1,60 @@
+{
+  "memorableMatches": [
+    {
+      "id": 1,
+      "date": "15 בדצמבר 2015",
+      "opponent": "מכבי תל אביב",
+      "englishOpponent": "Maccabi Tel Aviv",
+      "score": "3-1",
+      "competition": "ליגת אלוקים",
+      "englishCompetition": "Israeli Premier League",
+      "description": "משחק קדוש בו הפועל ניצחה בדרמטיות בעונת 2015-2016, משחק שהוגדר כנקודת הפנייה בחזרת הקבוצה להשגת אליפויות.",
+      "englishDescription": "A historic match where Hapoel won dramatically in the 2015-2016 season, marking a turning point in the club's return to championship glory.",
+      "significance": "ניצחון"
+    },
+    {
+      "id": 2,
+      "date": "22 בפברואר 2024",
+      "opponent": "הפועל תל אביב",
+      "englishOpponent": "Hapoel Tel Aviv",
+      "score": "2-2",
+      "competition": "דרבי לבן",
+      "englishCompetition": "White Derby",
+      "description": "דרבי חרוד בו הפועל בעזרת ניצחון ואמונה השיגה תיקו מרגש מול הפועל תל אביב.",
+      "englishDescription": "An intense derby match that showcased the competitive spirit between two Hapoel clubs.",
+      "significance": "תיקו"
+    },
+    {
+      "id": 3,
+      "date": "8 בספטמבר 2017",
+      "opponent": "מכבי חיפה",
+      "englishOpponent": "Maccabi Haifa",
+      "score": "1-0",
+      "competition": "ליגת אלוקים",
+      "englishCompetition": "Israeli Premier League",
+      "description": "ניצחון קטן אך חשוב על מכבי חיפה שהוביל את הפועל בעלייה בטבלה.",
+      "englishDescription": "A crucial victory over Maccabi Haifa that propelled Hapoel Beersheba up the standings.",
+      "significance": "ניצחון"
+    }
+  ],
+  "derbies": [
+    {
+      "id": 1,
+      "opponent": "הפועל תל אביב",
+      "englishOpponent": "Hapoel Tel Aviv",
+      "description": "הדרבי בין הפועל באר שבע לבין הפועל תל אביב, בעלי היסטוריה עשירה בתנועת הפועל. משחקים אלו מתאפיינים בעוצמה רגשית גבוהה וביריבויות בעלי ערך היסטורי.",
+      "englishDescription": "The derby between Hapoel Beersheba and Hapoel Tel Aviv, both historic clubs in the Hapoel movement. These matches are characterized by high emotional intensity and historical rivalry.",
+      "recordAgainst": "24 ניצחונות, 18 תיקו, 22 הפסדים",
+      "englishRecordAgainst": "24 Wins, 18 Draws, 22 Losses"
+    },
+    {
+      "id": 2,
+      "opponent": "מכבי בנגאור",
+      "englishOpponent": "Maccabi Netanya",
+      "description": "משחקים בין קבוצות אלו הם חלק מן התחרות השכיחות בליגה הישראלית.",
+      "englishDescription": "Matches between these teams are part of the frequent competitions in the Israeli league.",
+      "recordAgainst": "28 ניצחונות, 14 תיקו, 18 הפסדים",
+      "englishRecordAgainst": "28 Wins, 14 Draws, 18 Losses"
+    }
+  ]
+}
