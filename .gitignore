@@ -34,3 +34,7 @@ next-env.d.ts
 
 # patches and temporary files
 *.patch
+
+# next.js agent files (auto-generated)
+AGENTS.md
+CLAUDE.md
