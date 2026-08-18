@@ -1,0 +1,30 @@
+{
+  "jerseys": [
+    {
+      "id": 1,
+      "season": "1949-1960",
+      "era": "תקופה קדומה",
+      "englishEra": "Early Era",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "יש להוסיף",
+      "englishManufacturer": "To be added",
+      "description": "חולצה קלסית מהעידן המוקדם",
+      "englishDescription": "Classic shirt from early era",
+      "imageUrl": null
+    },
+    {
+      "id": 2,
+      "season": "2015-2016",
+      "era": "תקופה מודרנית",
+      "englishEra": "Modern Era",
+      "primaryColor": "#CC0000",
+      "secondaryColor": "#FFFFFF",
+      "manufacturer": "יש להוסיף",
+      "englishManufacturer": "To be added",
+      "description": "חולצה מתקופת השיא",
+      "englishDescription": "Shirt from golden era",
+      "imageUrl": null
+    }
+  ]
+}

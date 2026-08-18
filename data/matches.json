@@ -1,0 +1,27 @@
+{
+  "memorableMatches": [
+    {
+      "id": 1,
+      "date": "1974-05-15",
+      "opponent": "יש להוסיף",
+      "englishOpponent": "To be added",
+      "score": "0-0",
+      "competition": "אליפות",
+      "englishCompetition": "League",
+      "description": "משחק זיכרוני",
+      "englishDescription": "Memorable match",
+      "significance": "חשוב"
+    }
+  ],
+  "derbies": [
+    {
+      "id": 1,
+      "opponent": "מכבי באר שבע",
+      "englishOpponent": "Maccabi Beersheba",
+      "description": "דרבי בעיר",
+      "englishDescription": "City derby",
+      "recordAgainst": "יש להוסיף",
+      "englishRecordAgainst": "To be added"
+    }
+  ]
+}
