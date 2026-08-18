@@ -56,17 +56,25 @@ export default function Squads() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="gradient-to-right text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-6xl font-black mb-3">👥 סגלים</h1>
-          <p className="text-xl text-red-100">שחקנים אגדיים, שחקנים עדכניים ומאמנים</p>
+      <section className="gradient-to-right text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-5 left-5 text-[180px]">👥</div>
+          <div className="absolute bottom-5 right-5 text-[180px]">⭐</div>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-7xl md:text-8xl font-black mb-6">👥 סגלי הקבוצה</h1>
+          <p className="text-2xl md:text-3xl text-red-100 font-bold mb-4">שחקנים אגדיים, כוכבים עדכניים ומאמנים חכמים</p>
+          <p className="text-lg text-red-100/90 max-w-2xl mx-auto">מנהיגים שהביאו את הפועל לגבהים, ושחקנים שעשו הפרש</p>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-24">
         {/* Managers Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-black mb-8">מאמנים</h2>
+        <div className="mb-24">
+          <div className="mb-12">
+            <h2 className="text-5xl font-black mb-4">מאמנים</h2>
+            <p className="text-gray-600 text-lg">מנהיגים שעיצבו את הקבוצה והביאו ניצחונות</p>
+          </div>
           <div className="grid gap-6">
             {data.managers.map((manager) => (
               <div key={manager.id} className="card card-with-border">
