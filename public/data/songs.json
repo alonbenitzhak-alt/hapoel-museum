@@ -1,0 +1,45 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "שיר הקבוצה",
+      "englishTitle": "Club Song",
+      "year": null,
+      "lyrics": "יש להוסיף מילים",
+      "englishLyrics": "To be added",
+      "description": "שיר ראשי של הקבוצה",
+      "englishDescription": "Main club song"
+    },
+    {
+      "id": 2,
+      "title": "אדום ולבן",
+      "englishTitle": "Red and White",
+      "year": null,
+      "lyrics": "יש להוסיף מילים",
+      "englishLyrics": "To be added",
+      "description": "שיר תימנת הקבוצה",
+      "englishDescription": "Club anthem"
+    },
+    {
+      "id": 3,
+      "title": "מבאר שבע",
+      "englishTitle": "From Beersheba",
+      "year": null,
+      "lyrics": "יש להוסיף מילים",
+      "englishLyrics": "To be added",
+      "description": "שיר אזורי",
+      "englishDescription": "Regional song"
+    }
+  ],
+  "chants": [
+    {
+      "id": 1,
+      "name": "קריאה עיקרית",
+      "englishName": "Main Chant",
+      "text": "הפועל, הפועל, הפועל בש!",
+      "englishText": "Hapoel, Hapoel, Hapoel Beer Sheva!",
+      "occasion": "מהלך משחק",
+      "englishOccasion": "During match"
+    }
+  ]
+}
