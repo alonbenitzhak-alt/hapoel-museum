@@ -15,22 +15,11 @@ interface MemorableMatch {
   significance: string;
 }
 
-interface Derby {
-  id: number;
-  opponent: string;
-  englishOpponent: string;
-  description: string;
-  englishDescription: string;
-  recordAgainst: string;
-  englishRecordAgainst: string;
-}
-
 interface MatchesData {
   memorableMatches: MemorableMatch[];
-  derbies: Derby[];
 }
 
-const defaultData: MatchesData = { memorableMatches: [], derbies: [] };
+const defaultData: MatchesData = { memorableMatches: [] };
 
 export default function Matches() {
   const [data, setData] = useState<MatchesData>(defaultData);
@@ -52,7 +41,7 @@ export default function Matches() {
         </div>
         <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-7xl md:text-8xl font-black mb-6">⚽ משחקים</h1>
-          <p className="text-2xl md:text-3xl text-red-100 font-bold mb-4">משחקים משמעותיים ודרביים בהיסטוריית הפועל</p>
+          <p className="text-2xl md:text-3xl text-red-100 font-bold mb-4">משחקים משמעותיים בהיסטוריית הפועל</p>
           <p className="text-lg text-red-100/90 max-w-2xl mx-auto">מרגעים שהגדירו את קורת הקבוצה וזיכרונות שנשמרו בלב כל אוהד</p>
         </div>
       </section>
@@ -91,24 +80,6 @@ export default function Matches() {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Derbies */}
-        <div>
-          <h2 className="text-4xl font-black mb-8">דרביים</h2>
-          <div className="grid gap-6">
-            {data.derbies.map((derby) => (
-              <div key={derby.id} className="card card-with-border">
-                <h3 className="text-2xl font-black text-red-700 mb-3">
-                  {derby.opponent}
-                </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">{derby.description}</p>
-                <p className="text-gray-600">
-                  <span className="font-semibold">רקורד:</span> {derby.recordAgainst}
-                </p>
               </div>
             ))}
           </div>

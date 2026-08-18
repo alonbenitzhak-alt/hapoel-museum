@@ -2,44 +2,105 @@
   "songs": [
     {
       "id": 1,
-      "title": "שיר הקבוצה",
-      "englishTitle": "Club Song",
+      "title": "אני אדום בלב",
+      "englishTitle": "I Am Red in Heart",
+      "melody": "לפי \"היום\" - שרית חדד",
       "year": null,
-      "lyrics": "יש להוסיף מילים",
-      "englishLyrics": "To be added",
-      "description": "שיר ראשי של הקבוצה",
-      "englishDescription": "Main club song"
+      "description": "שיר הפתיחה המפורסם, משודר כשהשחקנים עולים למגרש",
+      "lyrics": "אני אדום בלב בלילה וביום, אדום עולה עולה עולה\nאני אוהב את הפועל, אוהב אותה מכל הלב\nאדום עולה על המגרש, אני נרגש\nאדום עולה זה הפועל באר-שבע\nאני אדום בלב בנשמה, יאללה הפועל מלחמה",
+      "youtubeLink": null
     },
     {
       "id": 2,
-      "title": "אדום ולבן",
-      "englishTitle": "Red and White",
+      "title": "בשבילך אהובתי",
+      "englishTitle": "For You My Love",
+      "melody": "לפי הפתיחה של \"תביא קצת דינרוס\" - אתניקס",
       "year": null,
-      "lyrics": "יש להוסיף מילים",
-      "englishLyrics": "To be added",
-      "description": "שיר תימנת הקבוצה",
-      "englishDescription": "Club anthem"
+      "description": "שיר אהבה מרגש לקבוצה, בשריקת הפתיחה",
+      "lyrics": "בשבילך אהובתי, אני איתך עד יום מותי\nלובש אדום רק בשבילך, מוכן למות למענך\nאדום עולה עולה עולה, אדום עולה עולה עולה",
+      "youtubeLink": null
     },
     {
       "id": 3,
-      "title": "מבאר שבע",
-      "englishTitle": "From Beersheba",
+      "title": "אלך איתך לכל מקום",
+      "englishTitle": "I'll Go With You Everywhere",
+      "melody": "לפי \"Shaft - (Mucho Mambo) Sway\"",
       "year": null,
-      "lyrics": "יש להוסיף מילים",
-      "englishLyrics": "To be added",
-      "description": "שיר אזורי",
-      "englishDescription": "Regional song"
+      "description": "שיר של נאמנות מוחלטת לקבוצה בכל מקום",
+      "lyrics": "אני אדום בלב בנשמה, הפועל מלחמה\nלעולם לא תצעדי לבד, הפועל באר-שבע\nאת אצלי תמיד בלב, כי רק אותך אני אוהב\nאלך איתך לכל מקום, אפילו עד הגיהנום",
+      "youtubeLink": null
+    },
+    {
+      "id": 4,
+      "title": "משוגע אדום",
+      "englishTitle": "Crazy Red",
+      "melody": "לפי \"הגמלים/שיר המחשב\"",
+      "year": null,
+      "description": "שיר פרוץ על תשוקת האהדה",
+      "lyrics": "הפועל באר שבע, אצלי בנשמה\nמוכן לתת הכל, מוכן להישבע\nאותך תמיד אוהב, גם אם זה כואב\nאני משוגע אדום הולך לכל מקום\nבשביל הקבוצה ניתן ת'נשמה\nהפועל יאללה – מ-ל-ח-מ-ה!",
+      "youtubeLink": null
+    },
+    {
+      "id": 5,
+      "title": "יוצאים לקרב",
+      "englishTitle": "Going to Battle",
+      "melody": "מקור עצמי",
+      "year": null,
+      "description": "שיר מעודד לפני משחק, עם קריאות חזקות",
+      "lyrics": "אווו.. היום יוצאים לקרב\nאווו.. לעד אותך נאהב\nאו..... נשיר מהנשמה\nבאר-שבע, מ-ל-ח-מ-ה!\nאווו.. אדום עולה עולה...",
+      "youtubeLink": null
+    },
+    {
+      "id": 6,
+      "title": "המנון האליפות",
+      "englishTitle": "Championship Anthem",
+      "melody": "לחן יוסף מוסטקי",
+      "year": null,
+      "description": "המנון רשמי לקראת אליפויות",
+      "lyrics": "באימון ובמשחק מתאמצים בלי הפוגה\nהם גמאו את המרחק וכבשו את הפסגה\nהפועל הפועל הפועל באר שבע\nהי קדימה! הי קדימה! למקום ראשון בליגה!",
+      "youtubeLink": null
     }
   ],
   "chants": [
     {
       "id": 1,
-      "name": "קריאה עיקרית",
-      "englishName": "Main Chant",
-      "text": "הפועל, הפועל, הפועל בש!",
-      "englishText": "Hapoel, Hapoel, Hapoel Beer Sheva!",
-      "occasion": "מהלך משחק",
-      "englishOccasion": "During match"
+      "name": "אדום עולה על המגרש",
+      "englishName": "Red Is Rising on the Field",
+      "text": "אדום עולה על המגרש, אדום עולה אני נרגש, אדום זה הצבע שלי, הפועל היא הקבוצה שלי",
+      "occasion": "בכל משחק, בעיקר בתחילת משחק",
+      "melody": "לפי הפרסומית של קטשופ אוסם"
+    },
+    {
+      "id": 2,
+      "name": "היי-יו-יה",
+      "englishName": "Hi-Yo-Yeah",
+      "text": "היי-יו-יה! היי-יו-יה! היי-יו-יה!",
+      "occasion": "קריאה סטריאופונית מיציע ליציע, יחודית לקהל הפועל מ-1997",
+      "melody": "מהשיר היי-יו-יה של להקת כוורת"
+    },
+    {
+      "id": 3,
+      "name": "אוהדים נשמה",
+      "englishName": "Fans Are Soul",
+      "text": "אוהדים נשמה באר שבע מלחמה, הקהל לא מקלל אני אוהב את הפועל",
+      "occasion": "בעת משחקים קשים, להגברת המורל",
+      "melody": "מקור עצמי"
+    },
+    {
+      "id": 4,
+      "name": "יאללה הפועל",
+      "englishName": "Let's Go Hapoel",
+      "text": "יאללה הפועל יאללה הפועל",
+      "occasion": "קריאה שנשמעת לפני משחקים, בעיקר בדקות הסיום",
+      "melody": "קצב מהיר עם קפיצות"
+    },
+    {
+      "id": 5,
+      "name": "אימפריה",
+      "englishName": "Empire",
+      "text": "אאא אהההו אהההו אהההו אהההו... אימפריה!",
+      "occasion": "בתחילה בקצב איטי עם חיבוקים, אח\"כ קצב מהיר עם קפיצות",
+      "melody": "מנגינה משלנו"
     }
   ]
 }

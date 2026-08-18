@@ -6,11 +6,13 @@ interface Song {
   id: number;
   title: string;
   englishTitle: string;
-  year: number | null;
+  year?: number | null;
+  melody?: string;
   lyrics: string;
-  englishLyrics: string;
+  englishLyrics?: string;
   description: string;
-  englishDescription: string;
+  englishDescription?: string;
+  youtubeLink?: string | null;
 }
 
 interface Chant {
@@ -93,10 +95,28 @@ export default function Songs() {
                 <div className="mb-8">
                   <h2 className="text-4xl font-black mb-2 text-red-700">{selectedSong.title}</h2>
                   <p className="text-gray-600 text-lg">{selectedSong.description}</p>
+                  {selectedSong.melody && (
+                    <p className="text-gray-600 text-sm mt-2"><span className="font-semibold">מנגינה:</span> {selectedSong.melody}</p>
+                  )}
                   {selectedSong.year && (
                     <p className="text-gray-500 text-sm mt-2">שנה: {selectedSong.year}</p>
                   )}
                 </div>
+
+                {selectedSong.youtubeLink && (
+                  <div className="mb-6">
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${selectedSong.youtubeLink}`}
+                      title={selectedSong.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg"
+                    />
+                  </div>
+                )}
 
                 <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
                   <h3 className="text-xl font-black mb-4">מילים</h3>
@@ -121,8 +141,14 @@ export default function Songs() {
                       {song.title}
                     </h3>
                     <p className="text-gray-600">{song.description}</p>
+                    {song.melody && (
+                      <p className="text-gray-500 text-sm mt-2">🎵 {song.melody}</p>
+                    )}
                     {song.year && (
                       <p className="text-gray-500 text-sm mt-2">📅 {song.year}</p>
+                    )}
+                    {song.youtubeLink && (
+                      <p className="text-red-600 text-sm mt-2 font-semibold">▶ יש קישור לשמיעה</p>
                     )}
                   </button>
                 ))}
