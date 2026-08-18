@@ -36,25 +36,5 @@
       "englishDescription": "A crucial victory over Maccabi Haifa that propelled Hapoel Beersheba up the standings.",
       "significance": "ניצחון"
     }
-  ],
-  "derbies": [
-    {
-      "id": 1,
-      "opponent": "הפועל תל אביב",
-      "englishOpponent": "Hapoel Tel Aviv",
-      "description": "הדרבי בין הפועל באר שבע לבין הפועל תל אביב, בעלי היסטוריה עשירה בתנועת הפועל. משחקים אלו מתאפיינים בעוצמה רגשית גבוהה וביריבויות בעלי ערך היסטורי.",
-      "englishDescription": "The derby between Hapoel Beersheba and Hapoel Tel Aviv, both historic clubs in the Hapoel movement. These matches are characterized by high emotional intensity and historical rivalry.",
-      "recordAgainst": "24 ניצחונות, 18 תיקו, 22 הפסדים",
-      "englishRecordAgainst": "24 Wins, 18 Draws, 22 Losses"
-    },
-    {
-      "id": 2,
-      "opponent": "מכבי בנגאור",
-      "englishOpponent": "Maccabi Netanya",
-      "description": "משחקים בין קבוצות אלו הם חלק מן התחרות השכיחות בליגה הישראלית.",
-      "englishDescription": "Matches between these teams are part of the frequent competitions in the Israeli league.",
-      "recordAgainst": "28 ניצחונות, 14 תיקו, 18 הפסדים",
-      "englishRecordAgainst": "28 Wins, 14 Draws, 18 Losses"
-    }
   ]
 }
